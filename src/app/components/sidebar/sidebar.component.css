@@ -1,0 +1,16 @@
+img{
+    width: 140px;
+    height: 35px;
+
+}
+.logo-img{
+    width: 30px;
+    height: 0px;
+    margin-top: 40px;
+    background-color: black;
+}
+p.ti{
+    color: black;
+    margin-left: 60px;
+    margin-top: -30px;
+}

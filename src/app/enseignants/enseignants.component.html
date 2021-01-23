@@ -1,0 +1,54 @@
+<div class="container spacer">
+    <div class="col-lg-14">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center"> Liste des Enseignants </h3>
+          <a  (click)="add(e)" class="btn btn-danger">Ajouter Enseignant</a>
+  
+  
+        </div>
+  
+        <div class="card-body">
+        
+<table class="table">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">Id Enseignant</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Email</th>
+              <th scope="col">Etablissement</th>
+              <th scope="col">Grade</th>
+             <th  scope="col">Action</th>
+            </tr>
+            </thead>
+  
+  
+  
+            <tbody>
+            <tr *ngFor=" let e of listeEnseignants" [id]="e.id">
+              <td> {{e.id}}</td>
+              <td> {{e.nom}}</td>
+              <td>{{e.prenom}}</td>
+              <td>{{e.email}}</td>
+              <td >{{e.etablissement}}</td>
+              <td >{{e.grade}}</td>
+               <td> <a (click)="detailEnseignants(e.id)"  class="btn btn-success" >Details</a>
+                     <a (click)="edit(e.id)"  class="btn btn-danger" >Edit</a>
+                    <a  (click)="delete(e.id)" class="btn btn-warning">Delete</a></td>
+            
+            
+            </tr>
+            </tbody>
+          </table>
+  
+        
+  
+  
+  
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>

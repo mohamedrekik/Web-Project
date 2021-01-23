@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header bg-dark text-white" >  <h3 style="text-align: center;color:white"> {{etudiant.nom +' '+etudiant.prenom}} </h3>
+    </div>
+  
+    <div class="card-body" >
+  <div>
+    <fieldset >
+      <legend>Détail Etudiant:</legend>
+      <div class="form-group" style="margin:40px;">
+        <label><h6> Nom :</h6> <h5> {{etudiant.nom}} </h5></label></div>
+   <div class="form-group" style="margin:40px;">
+         <label><h6>Prénom :</h6><h5> {{etudiant.prenom}} </h5></label>
+       </div>
+      <div class="form-group" style="margin:40px;">
+       <label><h6> Email :</h6> <h5> {{etudiant.email}} </h5></label></div>
+
+  <div class="form-group" style="margin:40px;">
+        <label><h6>Date de Naissance :</h6><h5> {{etudiant.date}} </h5></label>
+      </div>
+  
+      <div class="form-group" style="margin:40px;">
+        <label><h6> Diplome :</h6> <h5> {{etudiant.diplome}}</h5></label></div>
+        <div class="form-group" style="margin:40px;">
+        <label><h6>Date Inscription :</h6><h5> {{etudiant.dateInscription}} </h5></label>
+      </div>
+      <div class="form-group" style="margin:40px;">
+        <div class="entry-form">
+          <form action="#" method="post">
+            <h2><i>Cv</i></h2>
+            
+            
+            <img src="assets/img/pitch.jpg" width="150" height="150" align ="middle"/>
+
+            
+
+            <button  type="submit" class="submit-btn form-control" id="form-submit" (click)="forcerTelechargement()"> <span class="glyphicon glyphicon-download-alt"></span> télécharger</button>
+          </form>
+        </div>
+      </div>
+      
+      
+    
+  
+  
+   
+    </fieldset>
+  </div>
+
+  
+  
+ 
+  
+ 

@@ -1,0 +1,55 @@
+<div class="container spacer">
+    <div class="col-lg-14">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center"> Liste des Evenements </h3>
+          <a  (click)="add(c)" class="btn btn-danger">Ajouter Evenement</a>
+  
+  
+        </div>
+  
+        <div class="card-body">
+        
+<table class="table">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">Titre</th>
+              <th scope="col">Date Réalisation</th>
+              <th scope="col">Lien</th>
+             
+             
+             
+              
+              <th  scope="col">Action</th>
+            </tr>
+            </thead>
+  
+  
+  
+            <tbody>
+            <tr *ngFor=" let c of listeEvenements" [id]="c.id">
+  
+              <td> {{c.titre}}</td>
+              <td>{{c.dateRealisation}}</td>
+              <td>{{c.lieu}}</td>
+              
+               
+               <td> <a (click)="detail(c.id)"  class="btn btn-success" >Details</a>
+                    <a (click)="edit(c.id)"  class="btn btn-danger" >Edit</a>
+                    <a  (click)="delete(c.id)" class="btn btn-warning">Delete</a></td>
+
+            
+            </tr>
+            </tbody>
+          </table>
+  
+        
+  
+  
+  
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>

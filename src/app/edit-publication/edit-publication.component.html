@@ -1,0 +1,52 @@
+<div class="container spacer">
+    <div class="col-xs-6 .col-md-4 ">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center;color: white;">Modifier Publication</h3>  </div>
+  
+        <div class="card-body">
+          <div >
+            <div>
+              <label>Titre</label>
+              <input type="text" class="form-control" placeholder="titre" [(ngModel)]="publication.titre" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div>
+              <label>Type</label>
+              <input type="text" class="form-control" [(ngModel)]="publication.type"  placeholder="type" required>
+              <div *ngIf="">
+                Looks good!
+              </div>
+            </div>
+            <div >
+              <label>Date Apparition</label>
+              <input type="text" class="form-control" [(ngModel)]="publication.dateApparition"  placeholder="Date Apparaition" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div >
+              <div >
+                <label >Lien</label>
+                <input type="email" class="form-control" [(ngModel)]="publication.lien"  placeholder="lien" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid email.
+                </div>
+              </div>
+              <div >
+                <label>Source</label>
+                <input type="text" class="form-control" placeholder="Source" [(ngModel)]="publication.sourcePdf" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid state.
+                </div>
+              </div>
+             
+              </div>
+            
+          </div>
+          <button class="btn btn-danger" type="submit" (click)="update()">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>

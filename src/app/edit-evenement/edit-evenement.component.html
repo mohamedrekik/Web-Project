@@ -1,0 +1,35 @@
+<div class="container spacer">
+    <div class="col-xs-6 .col-md-4 ">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center;color: white;">Modifier Evenement</h3>  </div>
+  
+        <div class="card-body">
+          <div >
+            <div>
+              <label>Titre</label>
+              <input type="text" class="form-control" placeholder="titre" [(ngModel)]="evenement.titre" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div>
+              <label>Date Realisation</label>
+              <input type="text" class="form-control" [(ngModel)]="evenement.dateRealisation"  placeholder="date Realisation" required>
+              <div *ngIf="">
+                Looks good!
+              </div>
+            </div>
+            <div >
+              <label>Lieu</label>
+              <input type="text" class="form-control" [(ngModel)]="evenement.lieu"  placeholder="Lieu" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            
+          </div>
+          <button class="btn btn-danger" type="submit" (click)="update()">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>

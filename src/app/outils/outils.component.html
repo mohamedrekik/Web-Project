@@ -1,0 +1,49 @@
+<div class="container spacer">
+    <div class="col-lg-14">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center"> Liste des Outils </h3>
+          <a  (click)="add(e)" class="btn btn-danger">Ajouter Outil</a>
+  
+  
+        </div>
+  
+        <div class="card-body">
+        
+<table class="table">
+            <thead class="thead-dark">
+            <tr>
+            
+              <th scope="col">Date Generation</th>
+              <th scope="col">Source</th>
+              <th  scope="col">Action</th>
+            </tr>
+            </thead>
+  
+  
+  
+            <tbody>
+            <tr *ngFor=" let e of listeOutils" [id]="e.id">
+              <td> {{e.dateGeneration}}</td>
+              <td> {{e.source}}</td>
+              
+              
+               <td> <a (click)="detailOutil(e.id)"  class="btn btn-success" >Details</a>
+                     <a (click)="edit(e.id)"  class="btn btn-danger" >Edit</a>
+                    <a  (click)="delete(e.id)" class="btn btn-warning">Delete</a></td>
+            
+            
+            </tr>
+            </tbody>
+          </table>
+  
+        
+  
+  
+  
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>

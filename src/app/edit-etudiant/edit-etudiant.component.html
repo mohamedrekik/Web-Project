@@ -1,0 +1,94 @@
+<div class="container spacer">
+    <div class="col-xs-6 .col-md-4 ">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center;color: white;">Modifier Etudiant</h3>  </div>
+  
+        <div class="card-body">
+          <div >
+            <div>
+              <label>Cin</label>
+              <input type="text" class="form-control" placeholder="Cin" [(ngModel)]="etudiant.cin" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div>
+              <label>Nom</label>
+              <input type="text" class="form-control" [(ngModel)]="etudiant.nom"  placeholder="name" required>
+              <div *ngIf="">
+                Looks good!
+              </div>
+            </div>
+            <div >
+              <label>Prenom</label>
+              <input type="text" class="form-control" [(ngModel)]="etudiant.prenom"  placeholder="prenom" required>
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div >
+              <div >
+                <label >Email</label>
+                <input type="email" class="form-control" [(ngModel)]="etudiant.email"  placeholder="email" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid email.
+                </div>
+              </div>
+              <div >
+                <label>Date Naissance</label>
+                <input type="text" class="form-control" placeholder="Date Naissance" [(ngModel)]="etudiant.date" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div >
+                <label>Photo </label>
+                <input type="text" class="form-control" placeholder="Photo" [(ngModel)]="etudiant.photo" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid state.
+                </div>
+                <div >
+                    <label>Cv </label>
+                    <input type="text" class="form-control" placeholder="Cv" [(ngModel)]="etudiant.cv" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+
+                  </div>
+                  <div >
+                    <label>Date Inscription</label>
+                    <input type="text" class="form-control" placeholder="Date Inscription" [(ngModel)]="etudiant.dateInscription" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div >
+                    <label>Sujet</label>
+                    <input type="text" class="form-control" placeholder="Sujet" [(ngModel)]="etudiant.sujet" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div >
+                    <label>Diplome</label>
+                    <input type="text" class="form-control" placeholder="Diplome" [(ngModel)]="etudiant.diplome" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div >
+                    <label>Encadrant</label>
+                    <input type="text" class="form-control" placeholder="Id encadrant" [(ngModel)]="etudiant.encadrant.id" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-danger" type="submit" (click)="update()">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>

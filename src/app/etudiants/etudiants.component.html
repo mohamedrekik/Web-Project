@@ -1,0 +1,57 @@
+<div class="container spacer">
+    <div class="col-lg-14">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center"> Liste des Etudiants </h3>
+          <a  (click)="add(c)" class="btn btn-danger">Ajouter Etudiant</a>
+  
+  
+        </div>
+  
+        <div class="card-body">
+        
+<table class="table">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Email</th>
+              <th scope="col">Encadrant</th>
+             
+             
+              
+              <th  scope="col">Action</th>
+            </tr>
+            </thead>
+  
+  
+  
+            <tbody>
+            <tr *ngFor=" let c of listeEtudiants" [id]="c.id">
+  
+              <td> {{c.nom}}</td>
+              <td>{{c.prenom}}</td>
+              <td>{{c.email}}</td>
+              <div *ngIf="c.encadrant!=null;then bon else pasBon"></div>
+              <ng-template #bon><td >{{c.encadrant.nom}}</td></ng-template>
+               <ng-template #pasBon> <td>indéfini</td></ng-template>
+               
+               <td> <a (click)="detail(c.id)"  class="btn btn-success" >Details</a>
+                    <a (click)="edit(c.id)"  class="btn btn-danger" >Edit</a>
+                    <a  (click)="delete(c.id)" class="btn btn-warning">Delete</a></td>
+
+            
+            </tr>
+            </tbody>
+          </table>
+  
+        
+  
+  
+  
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>

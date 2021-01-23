@@ -1,0 +1,55 @@
+ <!-- MENU 
+ <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+         <div class="navbar-header">
+              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+              </button>
+
+           
+              
+         </div>
+
+       
+         <nav>
+              <ul class="nav navbar-nav navbar-nav-first" >
+                   <li><a href="#top" class="smoothScroll">Acceuil</a></li>
+                   <li><a  class="smoothScroll" routerLink="/sommes">Qui sommes Nous?</a></li>
+                   
+                   <li class="deroulant"><a (click)="Domaines()">Formations</a>
+                    <ul class="sous">
+                         
+                      <li style="cursor: pointer;"  *ngFor="let domaine of listDomaine" [id]="domaine.id" ><a (click)="listTheme(domaine.id)">{{domaine.nom}}</a>
+                      
+                       </li>
+                    </ul>
+
+                  </li>
+                  
+                  
+
+                  <li><a routerLink="/devis" class="smoothScroll">Devis</a></li>
+                   <li><a routerLink="/proposition" class="smoothScroll">Proposition</a></li>
+                   <li><a routerLink="/recrutement" class="smoothScroll">Recrutement</a></li>
+                   <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                   
+                   
+                   <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-phone"></i> 70032216</a></li>
+               </ul>
+              </ul>
+              
+              
+        </nav>
+
+    </div>
+</section>
+-->
+<div class="head">
+     <div style="margin-left: 60%;">
+     <button (click)="logout()" class="btn btn-lg btn-danger btn-block" type="submit">Logout</button> </div> 
+    <h1>BIENVENUE DANS NOTRE LABORATOIRE</h1>
+</div>

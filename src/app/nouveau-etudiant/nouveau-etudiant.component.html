@@ -1,0 +1,78 @@
+<div class="container spacer">
+    <div class="col-xs-6 .col-md-4 ">
+      <div class="card">
+        <div class="card-header bg-dark text-white">  <h3 style="text-align: center;color: white;">Nouveau Etudiant</h3>  </div>
+  
+        <div class="card-body">
+    <div class="form-row">
+        <div >
+      <div  >
+        <label>Cin</label>
+        <input type="text" [class.is-invalid]="cin.invalid && cin.touched"  class="form-control"  placeholder="" [(ngModel)]="etudiant.cin" #cin="ngModel"  required>
+        
+      </div>
+      
+  
+      <div >
+        <label>Nom</label>
+        
+     
+        <input type="text"  class="form-control" [(ngModel)]="etudiant.nom"  #nom="ngModel" placeholder=""  required>
+       
+    </div>
+   
+  
+      <div >
+        <label>Prénom</label>
+        <input type="text" [class.is-invalid]="prenom.invalid && prenom.touched"  class="form-control" [(ngModel)]="etudiant.prenom" #prenom="ngModel"  placeholder="" required>
+       
+    </div>
+    
+      <div >
+        <label >Email</label>
+        <input type="text" class="form-control"   [(ngModel)]="etudiant.email"  #email="ngModel"  placeholder="" required email>
+        
+      </div>
+      <div >
+        <label>Date de Naissance </label>
+        <input type="text"   class="form-control" #dateNaiss="ngModel"   placeholder="" [(ngModel)]="etudiant.date" required>
+        
+      </div>
+      <div >
+        <label>Photo</label>
+        <input type="text"   class="form-control" #photo="ngModel"   placeholder="" [(ngModel)]="etudiant.photo" required>
+        
+      </div>
+      <div >
+        <label>Cv</label>
+        <input type="text"  class="form-control" #cv="ngModel"   placeholder="" [(ngModel)]="etudiant.cv" required>
+        
+      </div>
+      <div >
+        <label>Date Inscription </label>
+        <input type="text"   class="form-control" #dateInscription="ngModel"   placeholder="" [(ngModel)]="etudiant.dateInscription" required>
+        
+      </div>
+      <div >
+        <label>Sujet </label>
+        <input type="text"  class="form-control" #sujet="ngModel"   placeholder="" [(ngModel)]="etudiant.sujet" required>
+        
+      </div>
+      <div >
+        <label>Diplome </label>
+        <input type="text"   class="form-control" #diplome="ngModel"   placeholder="" [(ngModel)]="etudiant.diplome" required>
+        
+      </div>
+      <div >
+        <label>Encadrant </label>
+        <input type="text"   class="form-control" #encadrant="ngModel"   placeholder="Id Encadrant" [(ngModel)]="etudiant.encadrant.id" required>
+        
+      </div>
+    </div>
+      
+    </div>
+    <button class="btn btn-danger" [disabled]="cin.invalid || nom.invalid " type="submit" (click)="save()">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
